@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Fetch My Location | POC</title>
+    <!-- The callback parameter is required, so we use console.debug as a noop -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=<GOOGLE_MAPS_API_KEY>&callback=initMap&libraries=maps,marker&v=beta">
+    </script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="container-button">
+        <button onclick="fetchGeoLocation()">Get My Location</button>
+        <div id="location"></div>
+    </div>
+    <div id="container">
+      <div id="map"></div>
+    </div>
+  </body>
+
+</html>
